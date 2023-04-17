@@ -33,3 +33,24 @@ order by cast (fecha as date)
 limit 10
 
 --8
+select * from stg.product_master
+where categoria='Electro'
+and subsubcategoria not in ('Soporte','Control remoto')
+
+--9
+select * from stg.order_line_sale
+where venta > 100.000
+and moneda = 'EUR'
+
+--10
+select * from stg.order_line_sale
+where fecha between '2022-10-01' and '2022-10-31'
+
+--11
+select * from stg.product_master
+where ean is not null
+
+--12
+select * from stg.order_line_sale
+where fecha between '2022-10-01' and '2022-11-10'
+
