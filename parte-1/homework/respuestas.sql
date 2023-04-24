@@ -1,3 +1,6 @@
+--Clase 1
+
+
 --1
 select * from stg.product_master
 where categoria = 'Electro'
@@ -53,4 +56,20 @@ where ean is not null
 --12
 select * from stg.order_line_sale
 where fecha between '2022-10-01' and '2022-11-10'
+
+
+--Clase 2
+
+
+--1
+select distinct pais
+from stg.store_master
+
+--2
+select distinct subcategoria
+from stg.product_master
+where is_active = 'true'
+
+--3
+
 
